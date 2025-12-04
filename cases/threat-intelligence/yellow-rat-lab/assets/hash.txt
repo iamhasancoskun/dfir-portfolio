@@ -1,0 +1,3 @@
+malware hash: 30E527E45F50D2BA82865C5679A6FA998EE0A1755361AB01673950810D071C85
+
+Use this hash on online threat intel platforms (e.g., VirusTotal, Hybrid Analysis) to complete the lab analysis.
