@@ -37,8 +37,8 @@ Her fazda hipotez → test → bulgu; görseller `Assets/` altında.
   - **Package Name**: com.ticno.olymptrade
   - **SHA-256**: `4f168a772350f283a1c49e78c1548d7c2c6c05106d8b9feb825fdc3466e9df3c`
 
-![Trading Uygulaması](Assets/q1.1.png)
-![SHA-256 Hash](Assets/q1.2.png)
+![Trading Uygulaması](assets/q1.1.png)
+![SHA-256 Hash](assets/q1.2.png)
 
 ### Faz 3 — Borç İlişkisinin Analizi (Q2 & Q3)
 - **Hipotez**: Kurban borç aldığı kişi ile SMS üzerinden iletişim kurmuş olabilir
@@ -48,8 +48,8 @@ Her fazda hipotez → test → bulgu; görseller `Assets/` altında.
   - **Borç Veren Kişi**: Shady Wahab (+201172137258)
   - **Mesaj İçeriği**: "It's time for you to pay back the money you owe me... Prepare the sum of 250,000 EGP"
 
-![SMS Mesajları](Assets/q2.png)
-![Kişi Listesi](Assets/q3.png)
+![SMS Mesajları](assets/q2.png)
+![Kişi Listesi](assets/q3.png)
 
 ### Faz 4 — Konum Analizi (Q4)
 - **Hipotez**: 20 Eylül 2023 tarihinde kurbanın konumu Google Maps aktivitesinden tespit edilebilir
@@ -59,8 +59,8 @@ Her fazda hipotez → test → bulgu; görseller `Assets/` altında.
   - **Konum**: The Nile Ritz-Carlton, Kahire
   - **Uygulama**: Google Maps (com.google.android.apps.maps)
 
-![Konum Aktivitesi](Assets/q4.1.png)
-![Google Maps Görüntüsü](Assets/q4.2.png)
+![Konum Aktivitesi](assets/q4.1.png)
+![Google Maps Görüntüsü](assets/q4.2.png)
 
 ### Faz 5 — Seyahat Planının Tespiti (Q5)
 - **Hipotez**: Kurban uçak biletini telefonunda saklamış olabilir
@@ -71,8 +71,8 @@ Her fazda hipotez → test → bulgu; görseller `Assets/` altında.
   - **Hedef**: Las Vegas (Cairo → Las Vegas)
   - **Uçuş**: Egypt Airlines, 01.10.2023, 09:00 AM
 
-![Uçak Bileti Metadata](Assets/q5.1.png)
-![Uçak Bileti Görüntüsü](Assets/q5.2.png)
+![Uçak Bileti Metadata](assets/q5.1.png)
+![Uçak Bileti Görüntüsü](assets/q5.2.png)
 
 ### Faz 6 — Discord İletişim Analizi (Q6)
 - **Hipotez**: Kurban Discord üzerinden arkadaşları ile buluşma planları yapmış olabilir
@@ -82,7 +82,7 @@ Her fazda hipotez → test → bulgu; görseller `Assets/` altında.
   - **Tarih**: 2023-09-20T20:46:02
   - **Mesaj**: "We'll meet at The Mob Museum, I'll await your call when you arrive"
 
-![Discord Mesajları](Assets/q6.png)
+![Discord Mesajları](assets/q6.png)
 
 ---
 

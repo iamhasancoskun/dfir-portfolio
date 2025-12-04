@@ -37,8 +37,8 @@ Per phase: hypothesis → test → finding. Images live under `Assets/`.
   - **Package Name**: com.ticno.olymptrade
   - **SHA-256**: `4f168a772350f283a1c49e78c1548d7c2c6c05106d8b9feb825fdc3466e9df3c`
 
-![Trading Application](Assets/q1.1.png)
-![SHA-256 Hash](Assets/q1.2.png)
+![Trading Application](assets/q1.1.png)
+![SHA-256 Hash](assets/q1.2.png)
 
 ### Phase 3 — Debt Relationship Analysis (Q2 & Q3)
 - **Hypothesis**: The victim may have communicated with the creditor via SMS
@@ -48,8 +48,8 @@ Per phase: hypothesis → test → finding. Images live under `Assets/`.
   - **Creditor**: Shady Wahab (+201172137258)
   - **Message Content**: "It's time for you to pay back the money you owe me... Prepare the sum of 250,000 EGP"
 
-![SMS Messages](Assets/q2.png)
-![Contacts List](Assets/q3.png)
+![SMS Messages](assets/q2.png)
+![Contacts List](assets/q3.png)
 
 ### Phase 4 — Location Analysis (Q4)
 - **Hypothesis**: The victim's location on September 20, 2023 can be detected from Google Maps activity
@@ -59,8 +59,8 @@ Per phase: hypothesis → test → finding. Images live under `Assets/`.
   - **Location**: The Nile Ritz-Carlton, Cairo
   - **Application**: Google Maps (com.google.android.apps.maps)
 
-![Location Activity](Assets/q4.1.png)
-![Google Maps Screenshot](Assets/q4.2.png)
+![Location Activity](assets/q4.1.png)
+![Google Maps Screenshot](assets/q4.2.png)
 
 ### Phase 5 — Travel Plan Detection (Q5)
 - **Hypothesis**: The victim may have stored flight ticket information on the phone
@@ -71,8 +71,8 @@ Per phase: hypothesis → test → finding. Images live under `Assets/`.
   - **Destination**: Las Vegas (Cairo → Las Vegas)
   - **Flight**: Egypt Airlines, 01.10.2023, 09:00 AM
 
-![Flight Ticket Metadata](Assets/q5.1.png)
-![Flight Ticket Screenshot](Assets/q5.2.png)
+![Flight Ticket Metadata](assets/q5.1.png)
+![Flight Ticket Screenshot](assets/q5.2.png)
 
 ### Phase 6 — Discord Communication Analysis (Q6)
 - **Hypothesis**: The victim may have made meeting plans with friends via Discord
@@ -82,7 +82,7 @@ Per phase: hypothesis → test → finding. Images live under `Assets/`.
   - **Date**: 2023-09-20T20:46:02
   - **Message**: "We'll meet at The Mob Museum, I'll await your call when you arrive"
 
-![Discord Messages](Assets/q6.png)
+![Discord Messages](assets/q6.png)
 
 ---
 
