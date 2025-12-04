@@ -16,9 +16,14 @@
 
 ## 👤 About Me
 
-SOC Analyst & DFIR Enthusiast | CyberDefenders Blue Team Labs | Volatility 3 | Wireshark | MITRE ATT&CK
+SOC Analyst & DFIR Enthusiast passionate about blue team operations and incident response. I document my learning journey through hands-on analysis of real-world attack scenarios from CyberDefenders platform.
+
+**Focus Areas:** Memory Forensics | Network Analysis | Threat Intelligence | Malware Analysis  
+**Tools:** Volatility 3 | Wireshark | MITRE ATT&CK Framework
 
 🔗 [LinkedIn](https://www.linkedin.com/in/hsnco) | 🌐 [GitHub](https://github.com/iamhasancoskun)
+
+> *Note: This portfolio represents 100+ hours of hands-on analysis, documentation, and learning. Each case includes my methodology, findings, and lessons learned.*
 
 ---
 
@@ -220,7 +225,10 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 <p align="center">
+  <strong>A Note from the Author</strong><br>
+  Every case in this portfolio represents real investigation work - from hypothesis formation to evidence collection, IOC extraction, and MITRE mapping. The bilingual documentation took significant effort to ensure accessibility for both Turkish and international DFIR communities.
+  <br><br>
   Made with ❤️ by <a href="https://github.com/iamhasancoskun">Hasan Coşkun</a>
   <br><br>
-  ⭐ If you like this project, don't forget to give it a star!
+  ⭐ If you found this helpful, star it and share with your network!
 </p>
