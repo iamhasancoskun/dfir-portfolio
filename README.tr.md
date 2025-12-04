@@ -18,7 +18,7 @@
 
 SOC Analyst & DFIR Enthusiast | CyberDefenders Blue Team Labs | Volatility 3 | Wireshark | MITRE ATT&CK
 
-🔗 [LinkedIn](https://linkedin.com/in/hsnco) | 🌐 [GitHub](https://github.com/iamhasancoskun)
+🔗 [LinkedIn](https://www.linkedin.com/in/hsnco) | 🌐 [GitHub](https://github.com/iamhasancoskun)
 
 ---
 
@@ -214,7 +214,7 @@ Bu proje [MIT Lisansı](LICENSE) altında lisanslanmıştır.
 
 ## 📞 İletişim
 
-- **LinkedIn:** [linkedin.com/in/hsnco](https://linkedin.com/in/hsnco)
+- **LinkedIn:** [linkedin.com/in/hsnco](https://www.linkedin.com/in/hsnco)
 - **GitHub:** [@iamhasancoskun](https://github.com/iamhasancoskun)
 
 ---
