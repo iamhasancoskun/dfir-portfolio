@@ -4,17 +4,17 @@
   <img src="https://img.shields.io/badge/Cases-11-blue?style=for-the-badge" alt="Total Cases"/>
   <img src="https://img.shields.io/badge/Memory%20Forensics-1-green?style=for-the-badge" alt="Memory"/>
   <img src="https://img.shields.io/badge/Network%20Forensics-5-orange?style=for-the-badge" alt="Network"/>
-  <img src="https://img.shields.io/badge/Languages-TR%20%7C%20EN-red?style=for-the-badge" alt="Languages"/>
+  <img src="https://img.shields.io/badge/Languages-EN%20%7C%20TR-red?style=for-the-badge" alt="Languages"/>
   <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="License"/>
 </p>
 
 <p align="center">
-  <strong>Türkçe</strong> | <a href="README.en.md">English</a>
+  <strong>English</strong> | <a href="README.tr.md">Türkçe</a>
 </p>
 
 ---
 
-## 👤 Hakkımda
+## 👤 About Me
 
 SOC Analyst & DFIR Enthusiast | CyberDefenders Blue Team Labs | Volatility 3 | Wireshark | MITRE ATT&CK
 
@@ -22,56 +22,56 @@ SOC Analyst & DFIR Enthusiast | CyberDefenders Blue Team Labs | Volatility 3 | W
 
 ---
 
-## 📊 Vaka Kategorileri
+## 📊 Case Categories
 
-| Kategori | Vaka Sayısı | Araçlar | Durum |
-|----------|-------------|---------|-------|
-| 🧠 **Memory Forensics** | 1 | Volatility 3, Rekall | ✅ Aktif |
-| 🌐 **Network Forensics** | 5 | Wireshark, tcpdump, tshark | ✅ Aktif |
-| 🔎 **Threat Intelligence** | 1 | VirusTotal, OSINT | ✅ Aktif |
-| 🦠 **Malware Analysis** | 1 | IDA, x64dbg, Any.run | ✅ Aktif |
-| 🕵️ **OSINT** | 1 | Google Lens, WhatsMyName | ✅ Aktif |
-| 📱 **Mobile Forensics** | 1 | ALEAPP, DBeaver | ✅ Aktif |
-| 🌐 **Web Application Security** | 1 | Wireshark, Burp Suite | ✅ Aktif |
+| Category | Case Count | Tools | Status |
+|----------|------------|-------|--------|
+| 🧠 **Memory Forensics** | 1 | Volatility 3, Rekall | ✅ Active |
+| 🌐 **Network Forensics** | 5 | Wireshark, tcpdump, tshark | ✅ Active |
+| 🔎 **Threat Intelligence** | 1 | VirusTotal, OSINT | ✅ Active |
+| 🦠 **Malware Analysis** | 1 | IDA, x64dbg, Any.run | ✅ Active |
+| 🕵️ **OSINT** | 1 | Google Lens, WhatsMyName | ✅ Active |
+| 📱 **Mobile Forensics** | 1 | ALEAPP, DBeaver | ✅ Active |
+| 🌐 **Web Application Security** | 1 | Wireshark, Burp Suite | ✅ Active |
 
 ---
 
-## 🎯 Öne Çıkan Vakalar
+## 🎯 Featured Cases
 
 ### 1. 🏆 [Tomcat Takeover - Web Server Breach Analysis](cases/network-forensics/tomcat-takeover/)
-**Tehdit:** Web Shell Deployment | **Teknikler:** Directory Bruteforce, WAR Upload, Reverse Shell  
-**Araçlar:** Wireshark, gobuster  
-**Highlights:** Saldırının baştan sona PCAP analizi ile ortaya çıkarılması
+**Threat:** Web Shell Deployment | **Techniques:** Directory Bruteforce, WAR Upload, Reverse Shell  
+**Tools:** Wireshark, gobuster  
+**Highlights:** Complete PCAP analysis revealing end-to-end attack chain
 
 ### 2. 🕵️ [Lespion - Insider Threat OSINT Investigation](cases/osint/lespion/)
-**Tehdit:** Insider Threat | **Teknikler:** GitHub Secrets Analysis, Geolocation  
-**Araçlar:** Google Lens, GitHub, OSINT Tools  
-**Highlights:** Tek bir GitHub profilinden çok katmanlı istihbarat çıkarımı
+**Threat:** Insider Threat | **Techniques:** GitHub Secrets Analysis, Geolocation  
+**Tools:** Google Lens, GitHub, OSINT Tools  
+**Highlights:** Multi-layered intelligence extraction from a single GitHub profile
 
 ### 3. 🎯 [PsExec Hunt - Lateral Movement Detection](cases/network-forensics/psexec-hunt/)
-**Tehdit:** Lateral Movement | **Teknikler:** PsExec, SMB Analysis  
-**Araçlar:** Wireshark, SMB Protocol Analysis  
-**Highlights:** Multi-target saldırının ağ trafiğinden tespiti
+**Threat:** Lateral Movement | **Techniques:** PsExec, SMB Analysis  
+**Tools:** Wireshark, SMB Protocol Analysis  
+**Highlights:** Multi-target attack detection from network traffic
 
 ### 4. 🦠 [Yellow RAT - Threat Intelligence Study](cases/threat-intelligence/yellow-rat-lab/)
-**Tehdit:** Yellow Cockatoo RAT | **Teknikler:** Threat Intelligence, IOC Analysis  
-**Araçlar:** VirusTotal, Red Canary Reports  
-**Highlights:** Tek bir hash'ten tüm saldırı zincirinin çıkarılması
+**Threat:** Yellow Cockatoo RAT | **Techniques:** Threat Intelligence, IOC Analysis  
+**Tools:** VirusTotal, Red Canary Reports  
+**Highlights:** Complete attack chain extraction from a single hash
 
 ### 5. 📱 [The Crime Lab - Android Forensics](cases/mobile-forensics/the-crime-lab/)
-**Tehdit:** Financial Crime Investigation | **Teknikler:** Android Data Extraction, Timeline Analysis  
-**Araçlar:** ALEAPP, SQLite, DBeaver  
-**Highlights:** Cinayet soruşturması kapsamında mobil forensics
+**Threat:** Financial Crime Investigation | **Techniques:** Android Data Extraction, Timeline Analysis  
+**Tools:** ALEAPP, SQLite, DBeaver  
+**Highlights:** Mobile forensics in murder investigation context
 
-[→ Tüm Vakaları Görüntüle](#tüm-vakalar)
+[→ View All Cases](#all-cases)
 
 ---
 
-## 📚 Tüm Vakalar
+## 📚 All Cases
 
 ### 🌐 Network Forensics
 <details>
-<summary>5 vaka - Genişletmek için tıklayın</summary>
+<summary>5 cases - Click to expand</summary>
 
 - **[Tomcat Takeover](cases/network-forensics/tomcat-takeover/)** - Web Server Breach via File Upload
 - **[PsExec Hunt](cases/network-forensics/psexec-hunt/)** - Lateral Movement Detection via SMB
@@ -83,7 +83,7 @@ SOC Analyst & DFIR Enthusiast | CyberDefenders Blue Team Labs | Volatility 3 | W
 
 ### 🕵️ OSINT & Threat Intelligence
 <details>
-<summary>2 vaka - Genişletmek için tıklayın</summary>
+<summary>2 cases - Click to expand</summary>
 
 - **[Lespion](cases/osint/lespion/)** - Insider Threat Investigation via GitHub & Social Media
 - **[Yellow RAT Lab](cases/threat-intelligence/yellow-rat-lab/)** - Threat Intel Analysis from Hash to IOC
@@ -92,7 +92,7 @@ SOC Analyst & DFIR Enthusiast | CyberDefenders Blue Team Labs | Volatility 3 | W
 
 ### 🦠 Malware Analysis
 <details>
-<summary>1 vaka - Genişletmek için tıklayın</summary>
+<summary>1 case - Click to expand</summary>
 
 - **[Oski Lab](cases/malware-analysis/oski-lab/)** - Infostealer Analysis via VirusTotal & Any.run
 
@@ -100,7 +100,7 @@ SOC Analyst & DFIR Enthusiast | CyberDefenders Blue Team Labs | Volatility 3 | W
 
 ### 📱 Mobile Forensics
 <details>
-<summary>1 vaka - Genişletmek için tıklayın</summary>
+<summary>1 case - Click to expand</summary>
 
 - **[The Crime Lab](cases/mobile-forensics/the-crime-lab/)** - Android Forensics in Murder Investigation
 
@@ -108,7 +108,7 @@ SOC Analyst & DFIR Enthusiast | CyberDefenders Blue Team Labs | Volatility 3 | W
 
 ### 🌐 Web Application Security
 <details>
-<summary>1 vaka - Genişletmek için tıklayın</summary>
+<summary>1 case - Click to expand</summary>
 
 - **[WebStrike](cases/web-application-security/webstrike/)** - Web Shell Upload & Reverse Shell Attack
 
@@ -116,7 +116,7 @@ SOC Analyst & DFIR Enthusiast | CyberDefenders Blue Team Labs | Volatility 3 | W
 
 ### 🧠 Memory Forensics
 <details>
-<summary>1 vaka - Genişletmek için tıklayın</summary>
+<summary>1 case - Click to expand</summary>
 
 - **[Amadey Trojan](cases/memory-forensics/amadey-trojan/)** - Advanced Memory Forensics with Volatility 3
   - *Coming Soon* - Process Hollowing & PEB Unlinking Analysis
@@ -125,7 +125,7 @@ SOC Analyst & DFIR Enthusiast | CyberDefenders Blue Team Labs | Volatility 3 | W
 
 ---
 
-## 🛠️ Kullanılan Araçlar ve Teknolojiler
+## 🛠️ Tools & Technologies
 
 ### Forensics & Analysis
 - **Volatility 3** - Memory forensics framework
@@ -143,60 +143,60 @@ SOC Analyst & DFIR Enthusiast | CyberDefenders Blue Team Labs | Volatility 3 | W
 
 ---
 
-## 📖 Metodoloji
+## 📖 Methodology
 
-Tüm vaka analizlerimde **"Hipotez Odaklı Yaklaşım"** kullanıyorum:
+All case analyses follow a **"Hypothesis-Driven Approach"**:
 
-1. **Hipotez** - Bulgu hakkında bir varsayım oluştur
-2. **Test** - Uygun araçlarla hipotezi test et
-3. **Kanıt** - Bulguları görsellerle belgele
-4. **IOC** - Göstergeleri çıkar ve paylaş
-5. **MITRE ATT&CK** - TTPs ile eşleştir
+1. **Hypothesis** - Form an assumption about the finding
+2. **Test** - Test the hypothesis with appropriate tools
+3. **Evidence** - Document findings with visuals
+4. **IOC** - Extract and share indicators
+5. **MITRE ATT&CK** - Map to TTPs
 
-Detaylı metodoloji: [docs/METHODOLOGY.md](docs/METHODOLOGY.md)
-
----
-
-## 🎓 Eğitim ve Kaynak
-
-Bu vakalar, **CyberDefenders** platformundaki Blue Team Labs çözümlerimden oluşmaktadır. Her analiz:
-
-- ✅ **Reproducible** - Tüm komutlar ve adımlar paylaşılmıştır
-- ✅ **Educational** - Öğrenme odaklı, adım adım açıklamalar
-- ✅ **Bilingual** - Türkçe ve İngilizce dokümantasyon
-- ✅ **Visual** - Her adım ekran görüntüleri ile desteklenmiştir
+Detailed methodology: [docs/METHODOLOGY.md](docs/METHODOLOGY.md)
 
 ---
 
-## 🤝 Katkıda Bulunma
+## 🎓 Education & Resources
 
-Bu proje, DFIR topluluğuna katkı sağlamak amacıyla oluşturulmuştur. Katkılarınızı bekliyorum!
+These cases are solutions from **CyberDefenders** Blue Team Labs platform. Each analysis is:
 
-- 🐛 Hata bildirimi
-- 💡 Yeni analiz teknikleri önerisi
-- 📝 Dokümantasyon iyileştirmeleri
-
-[CONTRIBUTING.md](docs/CONTRIBUTING.md) dosyasını okuyun.
+- ✅ **Reproducible** - All commands and steps are shared
+- ✅ **Educational** - Learning-focused, step-by-step explanations
+- ✅ **Bilingual** - Documentation in Turkish and English
+- ✅ **Visual** - Every step supported with screenshots
 
 ---
 
-## 📈 İstatistikler
+## 🤝 Contributing
 
-- **Toplam Analiz:** 11 vaka
-- **Toplam IOC:** 50+ gösterge
-- **Desteklenen Diller:** Türkçe, English
+This project was created to contribute to the DFIR community. Contributions are welcome!
+
+- 🐛 Bug reports
+- 💡 New analysis technique suggestions
+- 📝 Documentation improvements
+
+Read [CONTRIBUTING.md](docs/CONTRIBUTING.md) for details.
+
+---
+
+## 📈 Statistics
+
+- **Total Analyses:** 11 cases
+- **Total IOCs:** 50+ indicators
+- **Supported Languages:** English, Turkish
 - **Platform:** CyberDefenders Blue Team Labs
-- **Son Güncelleme:** Aralık 2025
+- **Last Updated:** December 2025
 
 ---
 
-## 📜 Lisans
+## 📜 License
 
-Bu proje [MIT Lisansı](LICENSE) altında lisanslanmıştır.
+This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-## 📞 İletişim
+## 📞 Contact
 
 - **LinkedIn:** [linkedin.com/in/hsnco](https://linkedin.com/in/hsnco)
 - **GitHub:** [@iamhasancoskun](https://github.com/iamhasancoskun)
@@ -206,6 +206,5 @@ Bu proje [MIT Lisansı](LICENSE) altında lisanslanmıştır.
 <p align="center">
   Made with ❤️ by <a href="https://github.com/iamhasancoskun">Hasan Coşkun</a>
   <br><br>
-  ⭐ Bu projeyi beğendiyseniz, yıldız vermeyi unutmayın!
+  ⭐ If you like this project, don't forget to give it a star!
 </p>
-
