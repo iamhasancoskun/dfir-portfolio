@@ -33,7 +33,7 @@ Each phase follows: hypothesis → test → finding; images are provided below.
 - **Filter:** `smb || smb2`
 - **Findings:** IP address 10.0.0.130 identified as the machine sending SMB Negotiate Protocol Request
 
-![Q1 - Attacker's Initial Access IP](q1.png)
+![Q1 - Attacker's Initial Access IP](assets/q1.png)
 
 **Analysis:** As shown in Packet 126, an "SMB Negotiate Protocol Request" was sent from IP address 10.0.0.130 to 10.0.0.133. In PsExec lateral movement, the attacker is the party initiating the first connection.
 
@@ -42,7 +42,7 @@ Each phase follows: hypothesis → test → finding; images are provided below.
 - **Filter:** `smb || smb2` (using existing filter)
 - **Findings:** SALES-PC hostname identified in Target Name field of NTLMSSP_CHALLENGE response
 
-![Q2 - First Target Machine Hostname](q2.png)
+![Q2 - First Target Machine Hostname](assets/q2.png)
 
 **Analysis:** As shown in Packet 131, the NTLMSSP_CHALLENGE response contains "Target Name: SALES-PC" information. This is the hostname of the machine with IP address 10.0.0.133.
 
@@ -51,7 +51,7 @@ Each phase follows: hypothesis → test → finding; images are provided below.
 - **Filter:** `ip.addr == 10.0.0.130 and ip.addr == 10.0.0.133 and (smb || smb2)`
 - **Findings:** Username "ssales" identified in User name field of NTLMSSP_AUTHENTICATE packet
 
-![Q3 - Attacker's Username](q3.png)
+![Q3 - Attacker's Username](assets/q3.png)
 
 **Analysis:** As shown in Packet 132, the NTLMSSP_AUTHENTICATE request contains "User name: ssales" information. This is the account used by the attacker for authentication.
 
@@ -60,7 +60,7 @@ Each phase follows: hypothesis → test → finding; images are provided below.
 - **Filter:** `ip.addr == 10.0.0.130 and ip.addr == 10.0.0.133 and (smb || smb2)`
 - **Findings:** PSEXESVC.exe file identified in SMB2 Create Request packets
 
-![Q4 - Service Executable Name](q4.png)
+![Q4 - Service Executable Name](assets/q4.png)
 
 **Analysis:** As shown in Packet 144, a "Create Request File: PSEXESVC.exe" request was sent. This is the name of the service executable deployed by PsExec on the target machine.
 
@@ -69,7 +69,7 @@ Each phase follows: hypothesis → test → finding; images are provided below.
 - **Filter:** `ip.addr == 10.0.0.130 and ip.addr == 10.0.0.133 and (smb || smb2)`
 - **Findings:** ADMIN$ share was used for service installation
 
-![Q5 - Service Installation Share](q5.png)
+![Q5 - Service Installation Share](assets/q5.png)
 
 **Analysis:** As shown in Packet 138, a "Tree Connect Request Tree: \\10.0.0.133\ADMIN$" request was sent. The ADMIN$ share was used to copy the PSEXESVC.exe file to the C:\Windows directory.
 
@@ -78,7 +78,7 @@ Each phase follows: hypothesis → test → finding; images are provided below.
 - **Filter:** `ip.addr == 10.0.0.130 and ip.addr == 10.0.0.133 and (smb || smb2)`
 - **Findings:** IPC$ share was used for communication
 
-![Q6 - Communication Share](q6.png)
+![Q6 - Communication Share](assets/q6.png)
 
 **Analysis:** As shown in Packet 134, a "Tree Connect Request Tree: \\10.0.0.133\IPC$" request was sent. The IPC$ share was used for service management and command execution.
 
@@ -89,14 +89,14 @@ Each phase follows: hypothesis → test → finding; images are provided below.
 - **Filter:** `(smb || smb2) and not (ip.addr == 10.0.0.130 or ip.addr == 10.0.0.133)`
 - **Findings:** IP address 10.0.0.131 identified as new lateral movement target from Host Announcement packets
 
-![Q7.1 - New Target IP Identification](q7.1.png)
+![Q7.1 - New Target IP Identification](assets/q7.1.png)
 
 #### 7.2 — Target Machine Hostname Identification
 - **Hypothesis:** Similar to Q2, we can identify the target machine hostname in NTLMSSP_CHALLENGE response packets
 - **Filter:** `ip.addr == 10.0.0.130 and ip.addr == 10.0.0.131 and (smb || smb2)`
 - **Findings:** MARKETING-PC hostname identified in Target Name field of NTLMSSP_CHALLENGE response
 
-![Q7.2 - Target Machine Hostname Identification](q7.2.png)
+![Q7.2 - Target Machine Hostname Identification](assets/q7.2.png)
 
 **Analysis:** In Q7, we applied a two-stage analysis. First, we identified IP address 10.0.0.131 by excluding the first pivot traffic. In the second stage, we used the same method as Q2 to analyze SMB traffic between the attacker (10.0.0.130) and the second target machine (10.0.0.131), finding "Target Name: MARKETING-PC" information in NTLMSSP_CHALLENGE response packets. This is the same analysis method used in Q2 for SALES-PC identification and confirms the attacker's second lateral movement target.
 

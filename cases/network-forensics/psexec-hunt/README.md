@@ -33,7 +33,7 @@ Her fazda hipotez → test → bulgu; görseller aşağıda yer almaktadır.
 - **Filtre:** `smb || smb2`
 - **Bulgular:** 10.0.0.130 IP adresi, SMB Negotiate Protocol Request gönderen makine olarak tespit edildi
 
-![Q1 - Saldırganın İlk Erişim IP'si](q1.png)
+![Q1 - Saldırganın İlk Erişim IP'si](assets/q1.png)
 
 **Analiz:** Packet 126'da görüldüğü üzere, 10.0.0.130 IP adresinden 10.0.0.133 IP adresine "SMB Negotiate Protocol Request" gönderilmiştir. PsExec lateral movement'te, saldırgan ilk bağlantıyı kuran taraftır.
 
@@ -42,7 +42,7 @@ Her fazda hipotez → test → bulgu; görseller aşağıda yer almaktadır.
 - **Filtre:** `smb || smb2` (mevcut filtreyi kullanarak)
 - **Bulgular:** SALES-PC hostname'i, NTLMSSP_CHALLENGE response'unda Target Name field'ında tespit edildi
 
-![Q2 - İlk Hedef Makine Hostname'i](q2.png)
+![Q2 - İlk Hedef Makine Hostname'i](assets/q2.png)
 
 **Analiz:** Packet 131'de görüldüğü üzere, NTLMSSP_CHALLENGE response'unda "Target Name: SALES-PC" bilgisi yer almaktadır. Bu, 10.0.0.133 IP adresine sahip makinenin hostname'idir.
 
@@ -51,7 +51,7 @@ Her fazda hipotez → test → bulgu; görseller aşağıda yer almaktadır.
 - **Filtre:** `ip.addr == 10.0.0.130 and ip.addr == 10.0.0.133 and (smb or smb2)`
 - **Bulgular:** ssales kullanıcı adı, NTLMSSP_AUTHENTICATE paketinde User name field'ında tespit edildi
 
-![Q3 - Saldırganın Kullandığı Username](q3.png)
+![Q3 - Saldırganın Kullandığı Username](assets/q3.png)
 
 **Analiz:** Packet 132'de görüldüğü üzere, NTLMSSP_AUTHENTICATE request'inde "User name: ssales" bilgisi yer almaktadır. Bu, saldırganın kimlik doğrulama için kullandığı hesaptır.
 
@@ -60,7 +60,7 @@ Her fazda hipotez → test → bulgu; görseller aşağıda yer almaktadır.
 - **Filtre:** `ip.addr == 10.0.0.130 and ip.addr == 10.0.0.133 and (smb or smb2)`
 - **Bulgular:** PSEXESVC.exe dosyası, SMB2 Create Request paketlerinde tespit edildi
 
-![Q4 - Service Executable Adı](q4.png)
+![Q4 - Service Executable Adı](assets/q4.png)
 
 **Analiz:** Packet 144'te görüldüğü üzere, "Create Request File: PSEXESVC.exe" isteği gönderilmiştir. Bu, PsExec'in hedef makinede kurduğu service executable'ın adıdır.
 
@@ -69,7 +69,7 @@ Her fazda hipotez → test → bulgu; görseller aşağıda yer almaktadır.
 - **Filtre:** `ip.addr == 10.0.0.130 and ip.addr == 10.0.0.133 and (smb or smb2)`
 - **Bulgular:** ADMIN$ share'ı, service installation için kullanıldı
 
-![Q5 - Service Installation Share'ı](q5.png)
+![Q5 - Service Installation Share'ı](assets/q5.png)
 
 **Analiz:** Packet 138'de görüldüğü üzere, "Tree Connect Request Tree: \\10.0.0.133\ADMIN$" isteği gönderilmiştir. ADMIN$ share'ı, PSEXESVC.exe dosyasını C:\Windows dizinine kopyalamak için kullanılmıştır.
 
@@ -78,7 +78,7 @@ Her fazda hipotez → test → bulgu; görseller aşağıda yer almaktadır.
 - **Filtre:** `ip.addr == 10.0.0.130 and ip.addr == 10.0.0.133 and (smb or smb2)`
 - **Bulgular:** IPC$ share'ı, communication için kullanıldı
 
-![Q6 - Communication Share'ı](q6.png)
+![Q6 - Communication Share'ı](assets/q6.png)
 
 **Analiz:** Packet 134'te görüldüğü üzere, "Tree Connect Request Tree: \\10.0.0.133\IPC$" isteği gönderilmiştir. IPC$ share'ı, service management ve command execution için kullanılmıştır.
 
@@ -89,14 +89,14 @@ Her fazda hipotez → test → bulgu; görseller aşağıda yer almaktadır.
 - **Filtre:** `(smb or smb2) and not (ip.addr == 10.0.0.130 or ip.addr == 10.0.0.133)`
 - **Bulgular:** 10.0.0.131 IP adresi, Host Announcement paketlerinden yeni lateral movement hedefi olarak tespit edildi
 
-![Q7.1 - Yeni Hedef IP Tespiti](q7.1.png)
+![Q7.1 - Yeni Hedef IP Tespiti](assets/q7.1.png)
 
 #### 7.2 — Hedef Makine Hostname Tespiti
 - **Hipotez:** Q2'deki gibi NTLMSSP_CHALLENGE response paketlerinde hedef makinenin hostname'ini tespit edebiliriz
 - **Filtre:** `ip.addr == 10.0.0.130 and ip.addr == 10.0.0.131 and (smb or smb2)`
 - **Bulgular:** MARKETING-PC hostname'i, NTLMSSP_CHALLENGE response'unda Target Name field'ında tespit edildi
 
-![Q7.2 - Hedef Makine Hostname Tespiti](q7.2.png)
+![Q7.2 - Hedef Makine Hostname Tespiti](assets/q7.2.png)
 
 **Analiz:** Q7'de iki aşamalı analiz uyguladık. İlk olarak, ilk pivot trafiğini hariç tutarak 10.0.0.131 IP'sini bulduk. İkinci aşamada, Q2 ile aynı yöntemi kullanarak saldırgan (10.0.0.130) ile ikinci hedef makine (10.0.0.131) arasındaki SMB trafiğini analiz ettik ve NTLMSSP_CHALLENGE response paketlerinde "Target Name: MARKETING-PC" bilgisini bulduk. Bu, Q2'deki SALES-PC tespiti ile aynı analiz yöntemidir ve saldırganın ikinci lateral movement hedefini doğrular.
 

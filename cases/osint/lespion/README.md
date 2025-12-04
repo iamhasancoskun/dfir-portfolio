@@ -43,20 +43,20 @@ Bir geliştiricinin yapabileceği en yaygın hatalardan biri, API anahtarı veya
 #### **1. API Anahtarı Tespiti:**
 Şüphelinin `Project-Build---Custom-Login-Page` adlı deposunu inceliyoruz. Depo içindeki `Login Page.js` dosyasına baktığımızda, `API Key` adında bir değişkenin içine gömülmüş uzun bir karakter dizisi görüyoruz.
 
-![Sızdırılmış API Anahtarı](evidences/q1.png)
+![Sızdırılmış API Anahtarı](assets/q1.png)
 
 **Bulgulanan API Anahtarı:** `aJFRaLHjMXvYZgLPwiJkroYLGRkNBW`
 
 #### **2. Parola Tespiti:**
 Aynı depodaki `Login Page.js` dosyasını incelemeye devam ettiğimizde, `Password` olarak etiketlenmiş ve **Base64** ile kodlanmış bir metin dikkatimizi çekiyor.
 
-![Base64 Kodlu Parola](evidences/q2.1.png)
+![Base64 Kodlu Parola](assets/q2.1.png)
 
 **Base64 Encoded String:** `UGljYXNzb0JhZ3VldHRlOTk=`
 
 Bu metni Base64 decoder ile çözdüğümüzde:
 
-![Çözülmüş Parola](evidences/q2.2.png)
+![Çözülmüş Parola](assets/q2.2.png)
 
 **Decoded Plaintext Password:** `PicassoBaguette99`
 
@@ -72,7 +72,7 @@ Bir iç tehdit, şirket kaynaklarını kendi çıkarları için kötüye kullana
 ### **Kanıtları İnceleme:**
 Şüphelinin GitHub'daki depo listesini incelediğimizde, `xmrig/xmrig` deposundan "fork"ladığı (kendi hesabına kopyaladığı) bir depo görüyoruz.
 
-![XMRig Deposu](evidences/q3.png)
+![XMRig Deposu](assets/q3.png)
 
 **XMRig Nedir?**
 - Monero (XMR) gibi kripto paralar için kullanılan CPU/GPU madencilik yazılımı
@@ -96,12 +96,12 @@ Bir iç tehdit, şirket kaynaklarını kendi çıkarları için kötüye kullana
 #### **1. Kullanıcı Adı Arama Sonuçları:**
 `EMarseille99` kullanıcı adını, [WhatsMyName.app](https://whatsmyname.app/) gibi bir kullanıcı adı arama motorunda veya doğrudan Google'da arattığımızda, birden fazla platformda eşleşen profiller buluyoruz.
 
-![Kullanıcı Adı Arama Sonuçları](evidences/q4(differentway).png)
+![Kullanıcı Adı Arama Sonuçları](assets/q4(differentway).png)
 
 #### **2. Platform Eşleşmeleri:**
 Arama sonuçları, şüphelinin popüler oyun platformu **Steam**'de ve sosyal medya platformu **Instagram**'da aynı kullanıcı adıyla hesapları olduğunu açıkça gösteriyor.
 
-![Google Arama Sonuçları](evidences/q4-q5.png)
+![Google Arama Sonuçları](assets/q4-q5.png)
 
 **Bulgulanan Platformlar:**
 - **Oyun Sitesi:** `Steam`
@@ -123,29 +123,29 @@ Bu sorular, görsellerden coğrafi konum bilgisi çıkarma (GEOINT - Geospatial 
 #### **1. Tatil Ülkesi (Soru 6):**
 Şüphelinin Instagram profilinde, Singapur'un ikonik yapısı olan **Marina Bay Sands** otelinin bir fotoğrafı bulunmaktadır.
 
-![Singapur - Marina Bay Sands](evidences/q6.1.png)
+![Singapur - Marina Bay Sands](assets/q6.1.png)
 
 Google Lens ile doğrulama:
 
-![Google Lens - Marina Bay Sands](evidences/q6.2.png)
+![Google Lens - Marina Bay Sands](assets/q6.2.png)
 
 **Tatil Yapılan Ülke:** `Singapore`
 
 #### **2. Ailenin Yaşadığı Şehir (Soru 7):**
 Instagram profilindeki bir diğer fotoğrafta ise, bir QR kod ve arka planda görünen, dünyanın en yüksek binası olan **Burj Khalifa** dikkat çekiyor. Ayrıca aile ile ilgili bir paylaşım metni barındıran resimdeki bayrağı Google Lens üzerinden kontrol ettiğimizde Birleşik Arap Emirlikleri olduğu ortaya çıkıyor.
 
-![Dubai - Burj Khalifa](evidences/q7.1.png)
+![Dubai - Burj Khalifa](assets/q7.1.png)
 
 Burj Khalifa detayı:
 
-![Dubai - Burj Khalifa](evidences/q7.2(Burj%20Khalifa%20in%20Dubai).png)
+![Dubai - Burj Khalifa](assets/q7.2(Burj%20Khalifa%20in%20Dubai).png)
 
 **Ailenin Yaşadığı Şehir:** `Dubai`
 
 #### **3. Şirketin Bulunduğu Şehir (Soru 8):**
 Vaka dosyalarında verilen `office.jpg` görseli, kendine özgü mimarisiyle dikkat çeken bir tren istasyonunu ve çevresini göstermektedir. Bu görseli Google Lens ile arattığımızda, yapının İngiltere'deki **Birmingham New Street** tren istasyonu olduğunu anlıyoruz.
 
-![Birmingham New Street İstasyonu](evidences/q8.png)
+![Birmingham New Street İstasyonu](assets/q8.png)
 
 **Şirketin Konumu:** `Birmingham`
 
@@ -161,7 +161,7 @@ Son soru için, vaka dosyalarındaki `Webcam.png` adlı görseli analiz etmemiz 
 ### **Kanıtları İnceleme:**
 Görselin üzerinde "A View from the Dome" (Kubbeden bir görünüş) ve sağ altta "EarthCam" yazısı bulunmaktadır. Bu ipuçlarını ve görseli Google'da arattığımızda, bu görüntünün Amerika Birleşik Devletleri'ndeki **University of Notre Dame**'in canlı kamera yayınına ait olduğunu tespit ediyoruz.
 
-![Notre Dame Üniversitesi](evidences/q9.png)
+![Notre Dame Üniversitesi](assets/q9.png)
 
 **University of Notre Dame Konumu:**
 - **Üniversite:** University of Notre Dame

@@ -43,20 +43,20 @@ One of the most common mistakes a developer can make is to embed sensitive infor
 #### **1. API Key Detection:**
 We examine the suspect's `Project-Build---Custom-Login-Page` repository. Looking at the `Login Page.js` file in the repository, we see a long string of characters embedded in a variable called `API Key`.
 
-![Leaked API Key](evidences/q1.png)
+![Leaked API Key](assets/q1.png)
 
 **Discovered API Key:** `aJFRaLHjMXvYZgLPwiJkroYLGRkNBW`
 
 #### **2. Password Detection:**
 Continuing to examine the `Login Page.js` file in the same repository, we notice a text labeled as `Password` and encoded with **Base64**: `UGljYXNzb0JhZ3VldHRlOTk=`
 
-![Base64 Encoded Password](evidences/q2.1.png)
+![Base64 Encoded Password](assets/q2.1.png)
 
 **Base64 Encoded String:** `UGljYXNzb0JhZ3VldHRlOTk=`
 
 When we decode this text using a Base64 decoder:
 
-![Decoded Password](evidences/q2.2.png)
+![Decoded Password](assets/q2.2.png)
 
 **Decoded Plaintext Password:** `PicassoBaguette99`
 
@@ -72,7 +72,7 @@ An insider threat can misuse company resources for personal gain. Cryptocurrency
 ### **Evidence Examination:**
 When we examine the suspect's repository list on GitHub, we see a repository "forked" (copied to their own account) from `xmrig/xmrig`.
 
-![XMRig Repository](evidences/q3.png)
+![XMRig Repository](assets/q3.png)
 
 **What is XMRig?**
 - CPU/GPU mining software used for cryptocurrencies like Monero (XMR)
@@ -96,12 +96,12 @@ People usually use the same or very similar usernames on different platforms. Ba
 #### **1. Username Search Results:**
 When we search for the username `EMarseille99` using a username search engine like [WhatsMyName.app](https://whatsmyname.app/) or directly on Google, we find matching profiles on multiple platforms.
 
-![Username Search Results](evidences/q4(differentway).png)
+![Username Search Results](assets/q4(differentway).png)
 
 #### **2. Platform Matches:**
 Search results clearly show that the suspect has accounts on the popular gaming platform **Steam** and social media platform **Instagram** with the same username.
 
-![Google Search Results](evidences/q4-q5.png)
+![Google Search Results](assets/q4-q5.png)
 
 **Discovered Platforms:**
 - **Gaming Website:** `Steam`
@@ -123,29 +123,29 @@ These questions test our ability to extract geographic location information from
 #### **1. Holiday Country (Question 6):**
 In the suspect's Instagram profile, there is a photo of **Marina Bay Sands**, the iconic structure of Singapore.
 
-![Singapore - Marina Bay Sands](evidences/q6.1.png)
+![Singapore - Marina Bay Sands](assets/q6.1.png)
 
 Verification with Google Lens:
 
-![Google Lens - Marina Bay Sands](evidences/q6.2.png)
+![Google Lens - Marina Bay Sands](assets/q6.2.png)
 
 **Holiday Country:** `Singapore`
 
 #### **2. Family's City (Question 7):**
 In another photo from the Instagram profile, we notice a QR code and in the background, **Burj Khalifa**, the world's tallest building. Additionally, when we check the flag in the image containing family-related sharing text through Google Lens, it turns out to be the United Arab Emirates. Also, Burj Khalifa is located in Dubai.
 
-![Dubai - Burj Khalifa](evidences/q7.1.png)
+![Dubai - Burj Khalifa](assets/q7.1.png)
 
 Burj Khalifa detail:
 
-![Dubai - Burj Khalifa](evidences/q7.2(Burj%20Khalifa%20in%20Dubai).png)
+![Dubai - Burj Khalifa](assets/q7.2(Burj%20Khalifa%20in%20Dubai).png)
 
 **Family's City:** `Dubai`
 
 #### **3. Company Location (Question 8):**
 The `office.jpg` image provided in the case files shows a train station and its surroundings with distinctive architecture. When we search this image with Google Lens, we understand that the structure is **Birmingham New Street** train station in England.
 
-![Birmingham New Street Station](evidences/q8.png)
+![Birmingham New Street Station](assets/q8.png)
 
 **Company Location:** `Birmingham`
 
@@ -161,7 +161,7 @@ For the final question, we need to analyze the `Webcam.png` image in the case fi
 ### **Evidence Examination:**
 The image contains "A View from the Dome" at the top and "EarthCam" at the bottom right. When we search for these clues and the image on Google, we determine that this view belongs to the live camera broadcast of **University of Notre Dame** in the United States.
 
-![Notre Dame University](evidences/q9.png)
+![Notre Dame University](assets/q9.png)
 
 **University of Notre Dame Location:**
 - **University:** University of Notre Dame
