@@ -1,0 +1,60 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Thumbnails
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+*.egg-info/
+
+# Forensic Data (Large files - should not be in repo)
+*.pcap
+*.pcapng
+*.mem
+*.vmem
+*.dmp
+*.raw
+*.dd
+*.e01
+*.ad1
+*.zip
+*.7z
+*.tar.gz
+
+# Temporary files
+temp_extract_dir/
+*.tmp
+*.log
+*.bak
+
+# Node modules (if using any web tools)
+node_modules/
+
+# OS generated files
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Archives
+*.rar
+*.tar
+*.tgz
+
