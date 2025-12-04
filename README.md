@@ -159,7 +159,23 @@ Detailed methodology: [docs/METHODOLOGY.md](docs/METHODOLOGY.md)
 
 ## 🎓 Education & Resources
 
-These cases are solutions from **CyberDefenders** Blue Team Labs platform. Each analysis is:
+### 📚 **Challenge Source**
+
+All cases in this repository are **solved challenges** from the [**CyberDefenders**](https://cyberdefenders.org) platform, specifically from the [**SOC Analyst Tier 1 Track**](https://cyberdefenders.org/tracks/soc-analyst-tier-1/).
+
+**🔗 CyberDefenders Platform:**  
+- Website: [cyberdefenders.org](https://cyberdefenders.org)
+- Track: [SOC Analyst Tier 1](https://cyberdefenders.org/tracks/soc-analyst-tier-1/)
+- Lab Type: Blue Team Hands-On Labs
+
+### ⚖️ **Educational Use & Attribution**
+
+- ✅ **Challenge Files:** Original forensic artifacts (PCAP, memory dumps, etc.) are available on CyberDefenders platform
+- ✅ **This Repository Contains:** My analysis, methodology, findings, screenshots, and IOC extraction
+- ✅ **Purpose:** Educational documentation and portfolio showcase
+- ⚠️ **Note:** This repository does NOT redistribute original challenge files to respect platform terms
+
+### 📖 **Analysis Features**
 
 - ✅ **Reproducible** - All commands and steps are shared
 - ✅ **Educational** - Learning-focused, step-by-step explanations

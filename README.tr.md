@@ -159,12 +159,28 @@ Detaylı metodoloji: [docs/METHODOLOGY.md](docs/METHODOLOGY.md)
 
 ## 🎓 Eğitim ve Kaynak
 
-Bu vakalar, **CyberDefenders** platformundaki Blue Team Labs çözümlerimden oluşmaktadır. Her analiz:
+### 📚 **Challenge Kaynağı**
 
-- ✅ **Reproducible** - Tüm komutlar ve adımlar paylaşılmıştır
-- ✅ **Educational** - Öğrenme odaklı, adım adım açıklamalar
-- ✅ **Bilingual** - Türkçe ve İngilizce dokümantasyon
-- ✅ **Visual** - Her adım ekran görüntüleri ile desteklenmiştir
+Bu depodaki tüm vakalar, [**CyberDefenders**](https://cyberdefenders.org) platformundaki, özellikle [**SOC Analyst Tier 1 Track**](https://cyberdefenders.org/tracks/soc-analyst-tier-1/) içerisindeki **çözülmüş challenge'lerdir**.
+
+**🔗 CyberDefenders Platformu:**  
+- Website: [cyberdefenders.org](https://cyberdefenders.org)
+- Track: [SOC Analyst Tier 1](https://cyberdefenders.org/tracks/soc-analyst-tier-1/)
+- Lab Türü: Blue Team Hands-On Labs
+
+### ⚖️ **Eğitim Amaçlı Kullanım ve Atıf**
+
+- ✅ **Challenge Dosyaları:** Orijinal forensic artifact'ler (PCAP, memory dump, vb.) CyberDefenders platformunda mevcuttur
+- ✅ **Bu Depo İçeriği:** Benim analizim, metodolojim, bulgularım, ekran görüntülerim ve IOC çıkarımlarım
+- ✅ **Amaç:** Eğitim dokümantasyonu ve portfolio sergileme
+- ⚠️ **Not:** Platform şartlarına saygı göstermek adına, bu depo orijinal challenge dosyalarını YENIDEN DAĞITMAZ
+
+### 📖 **Analiz Özellikleri**
+
+- ✅ **Tekrarlanabilir** - Tüm komutlar ve adımlar paylaşılmıştır
+- ✅ **Eğitici** - Öğrenme odaklı, adım adım açıklamalar
+- ✅ **İki Dilli** - Türkçe ve İngilizce dokümantasyon
+- ✅ **Görsel** - Her adım ekran görüntüleri ile desteklenmiştir
 
 ---
 
