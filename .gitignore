@@ -58,3 +58,5 @@ $RECYCLE.BIN/
 *.tar
 *.tgz
 
+ALEAPP_Reports_*/
+*.db
