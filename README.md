@@ -158,7 +158,7 @@ All case analyses follow a **"Hypothesis-Driven Approach"**:
 4. **IOC** - Extract and share indicators
 5. **MITRE ATT&CK** - Map to TTPs
 
-Detailed methodology: [docs/METHODOLOGY.md](docs/METHODOLOGY.md)
+Detailed methodology: [English](docs/METHODOLOGY.md) | [Türkçe](docs/METHODOLOGY.tr.md)
 
 ---
 
@@ -197,7 +197,7 @@ This project was created to contribute to the DFIR community. Contributions are 
 - 💡 New analysis technique suggestions
 - 📝 Documentation improvements
 
-Read [CONTRIBUTING.md](docs/CONTRIBUTING.md) for details.
+Feel free to open an issue or submit a pull request!
 
 ---
 

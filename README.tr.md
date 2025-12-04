@@ -158,7 +158,7 @@ Tüm vaka analizlerimde **"Hipotez Odaklı Yaklaşım"** kullanıyorum:
 4. **IOC** - Göstergeleri çıkar ve paylaş
 5. **MITRE ATT&CK** - TTPs ile eşleştir
 
-Detaylı metodoloji: [docs/METHODOLOGY.md](docs/METHODOLOGY.md)
+Detaylı metodoloji: [English](docs/METHODOLOGY.md) | [Türkçe](docs/METHODOLOGY.tr.md)
 
 ---
 
@@ -197,7 +197,7 @@ Bu proje, DFIR topluluğuna katkı sağlamak amacıyla oluşturulmuştur. Katkı
 - 💡 Yeni analiz teknikleri önerisi
 - 📝 Dokümantasyon iyileştirmeleri
 
-[CONTRIBUTING.md](docs/CONTRIBUTING.md) dosyasını okuyun.
+Issue açmaktan veya pull request göndermekten çekinmeyin!
 
 ---
 
