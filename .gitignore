@@ -60,3 +60,8 @@ $RECYCLE.BIN/
 
 ALEAPP_Reports_*/
 *.db
+
+# Forensic Analysis Reports
+ALEAPP_Reports_*/
+*_Reports_*/
+*.db
