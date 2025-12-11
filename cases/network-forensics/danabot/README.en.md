@@ -22,7 +22,7 @@ This case involves the analysis of suspicious network traffic detected by the SO
 ---
 
 ## 2. Technical Analysis (Hypothesis‑Driven)
-Per phase: hypothesis → test → finding. Images live under `Assets/`.
+Per phase: hypothesis → test → finding. Images live under `assets/`.
 
 ### Phase 1 — Initial Access Analysis (Q1)
 - **Hypothesis**: If we find the IP address used for initial access, we can identify the attacker's IP
@@ -32,7 +32,7 @@ Per phase: hypothesis → test → finding. Images live under `Assets/`.
   - **Attacker IP**: `62.173.142.148`
   - **Victim IP**: `10.2.14.101`
 
-![DNS Query and IP Detection](Assets/q1.png)
+![DNS Query and IP Detection](assets/q1.png)
 
 ### Phase 2 — Malicious File Detection (Q2)
 - **Hypothesis**: A malicious file must have been downloaded during initial access
@@ -42,7 +42,7 @@ Per phase: hypothesis → test → finding. Images live under `Assets/`.
   - **Content-Type**: `application/octet-stream`
   - **Content-Disposition**: `attachment;filename=allegato_708.js`
 
-![Malicious File Detection](Assets/q2.png)
+![Malicious File Detection](assets/q2.png)
 
 ### Phase 3 — File Hash Analysis (Q3)
 - **Hypothesis**: The malicious file's SHA-256 hash value can be calculated
@@ -51,8 +51,8 @@ Per phase: hypothesis → test → finding. Images live under `Assets/`.
   - **SHA-256**: `847b4ad90b1daba2d9117a8e05776f3f902dda593fb1252289538acf476c4268`
   - **File Size**: 5558 bytes
 
-![SHA-256 Hash Calculation](Assets/q3.1.png)
-![Online Hash Calculator](Assets/q3.2.png)
+![SHA-256 Hash Calculation](assets/q3.1.png)
+![Online Hash Calculator](assets/q3.2.png)
 
 ### Phase 4 — Process Analysis (Q4)
 - **Hypothesis**: The JavaScript file must have been executed by a specific process
@@ -62,7 +62,7 @@ Per phase: hypothesis → test → finding. Images live under `Assets/`.
   - **Reason**: .js files are executed by wscript.exe by default on Windows
   - **Port Analysis**: Continuous data transfer on port 49788
 
-![Process Detection](Assets/q4.png)
+![Process Detection](assets/q4.png)
 
 ### Phase 5 — Second Malicious File Detection (Q5)
 - **Hypothesis**: We can find the attacker's second malicious file in HTTP requests
@@ -72,7 +72,7 @@ Per phase: hypothesis → test → finding. Images live under `Assets/`.
   - **File Extension**: `.dll`
   - **Target IP**: `188.114.97.3`
 
-![Second Malicious File](Assets/q5.png)
+![Second Malicious File](assets/q5.png)
 
 ### Phase 6 — Second File Hash Analysis (Q6)
 - **Hypothesis**: The MD5 hash value of the second malicious file exported from File tab can be calculated
@@ -82,7 +82,7 @@ Per phase: hypothesis → test → finding. Images live under `Assets/`.
   - **File Size**: 11922432 bytes
   - **File Type**: Dynamic Link Library (DLL)
 
-![MD5 Hash Calculation](Assets/q6.png)
+![MD5 Hash Calculation](assets/q6.png)
 
 ---
 

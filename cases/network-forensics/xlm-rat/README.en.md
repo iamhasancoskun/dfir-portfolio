@@ -23,7 +23,7 @@ This case involves the analysis of a machine flagged due to suspicious network t
 
 ## 2. Technical Analysis (Hypothesis-Driven)
 
-Each phase follows hypothesis → test → findings; screenshots in `Assets/` directory.
+Each phase follows hypothesis → test → findings; screenshots in `assets/` directory.
 
 ### Phase 1 — Initial Malware Download Analysis (Q1)
 - **Hypothesis**: The attacker downloaded the first stage malware via HTTP traffic
@@ -34,8 +34,8 @@ Each phase follows hypothesis → test → findings; screenshots in `Assets/` di
   - **Downloaded File**: `mdm.jpg` (PowerShell script disguised as JPEG)
   - **Full URL**: `http://45.126.209.4:222/mdm.jpg`
 
-![HTTP GET Request](Assets/q1.1.png)
-![HTTP Response and PowerShell Content](Assets/q1.2.png)
+![HTTP GET Request](assets/q1.1.png)
+![HTTP Response and PowerShell Content](assets/q1.2.png)
 
 ### Phase 2 — Hosting Provider Identification (Q2)
 - **Hypothesis**: The attacker's IP address should belong to a specific hosting provider
@@ -45,7 +45,7 @@ Each phase follows hypothesis → test → findings; screenshots in `Assets/` di
   - **Location**: Miami, USA
   - **AS Number**: AS23470
 
-![Hosting Provider Analysis](Assets/q2.png)
+![Hosting Provider Analysis](assets/q2.png)
 
 ### Phase 3 — Malware Executable Hash Analysis (Q3)
 - **Hypothesis**: The PowerShell script should contain a secondary payload embedded in hex format
@@ -63,8 +63,8 @@ Each phase follows hypothesis → test → findings; screenshots in `Assets/` di
   - **Size**: 65.00 KB
   - **Anti-Forensics**: File name hidden as "bb" (instead of PE)
 
-![PE File Detection](Assets/q3.1-_PE-fake-for-anti-forensics.png)
-![Hash Calculation with CyberChef](Assets/q3.2-after-deleting-all-content-except-from-$hexString_bbb.png)
+![PE File Detection](assets/q3.1-_PE-fake-for-anti-forensics.png)
+![Hash Calculation with CyberChef](assets/q3.2-after-deleting-all-content-except-from-$hexString_bbb.png)
 
 ### Phase 4 — Malware Family Identification (Q4)
 - **Hypothesis**: Obfuscated PowerShell code should contain signatures of a specific malware family
@@ -81,8 +81,8 @@ Each phase follows hypothesis → test → findings; screenshots in `Assets/` di
   - **Detection Rate**: 56/70 security vendors
   - **Obfuscation Technique**: String masking with `#` character
 
-![VirusTotal Analysis](Assets/q4.png)
-![PowerShell Deobfuscation](Assets/q4.1-load.png)
+![VirusTotal Analysis](assets/q4.png)
+![PowerShell Deobfuscation](assets/q4.1-load.png)
 
 ### Phase 5 — Malware Creation Timestamp (Q5)
 - **Hypothesis**: HTTP response headers should contain the file creation time
@@ -91,7 +91,7 @@ Each phase follows hypothesis → test → findings; screenshots in `Assets/` di
   - **Creation Time**: `2023-10-30 15:08:44 UTC` (from VirusTotal)
   - **Download Time**: `Tue, 09 Jan 2024 17:27:29 GMT` (from HTTP response)
 
-![Timestamp Analysis](Assets/q5.png)
+![Timestamp Analysis](assets/q5.png)
 
 ### Phase 6 — LOLBin Usage Analysis (Q6)
 - **Hypothesis**: PowerShell script should abuse legitimate Windows tools for stealthy process execution
@@ -109,7 +109,7 @@ Each phase follows hypothesis → test → findings; screenshots in `Assets/` di
   - **Usage Purpose**: Legitimate tool for registering .NET assemblies
   - **Anti-Forensics**: File path obfuscated and split into parts
 
-![LOLBin Deobfuscation](Assets/q6.png)
+![LOLBin Deobfuscation](assets/q6.png)
 
 ### Phase 7 — Dropped Files Analysis (Q7)
 - **Hypothesis**: PowerShell script should create multiple files for persistence
@@ -125,7 +125,7 @@ Each phase follows hypothesis → test → findings; screenshots in `Assets/` di
   - **Purpose**: Persistence and chained execution
   - **Anti-Forensics**: File names obfuscated as "Conted" (instead of Content)
 
-![Dropped Files Analysis](Assets/q7.png)
+![Dropped Files Analysis](assets/q7.png)
 
 ---
 

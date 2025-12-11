@@ -23,7 +23,7 @@ Bu vaka, şüpheli ağ trafiği nedeniyle işaretlenen bir makinenin analizini i
 
 ## 2. Teknik Analiz (Hipotez Odaklı)
 
-Her fazda hipotez → test → bulgu; görseller `Assets/` altında.
+Her fazda hipotez → test → bulgu; görseller `assets/` altında.
 
 ### Faz 1 — İlk Aşama Malware İndirme Analizi (Q1)
 - **Hipotez**: Saldırgan, HTTP trafiği üzerinden ilk aşama kötü amaçlı yazılımı indirmiş olmalı
@@ -34,8 +34,8 @@ Her fazda hipotez → test → bulgu; görseller `Assets/` altında.
   - **İndirilen Dosya**: `mdm.jpg` (JPEG olarak gizlenmiş PowerShell betiği)
   - **Tam URL**: `http://45.126.209.4:222/mdm.jpg`
 
-![HTTP GET İsteği](Assets/q1.1.png)
-![HTTP Yanıt ve PowerShell İçeriği](Assets/q1.2.png)
+![HTTP GET İsteği](assets/q1.1.png)
+![HTTP Yanıt ve PowerShell İçeriği](assets/q1.2.png)
 
 ### Faz 2 — Hosting Sağlayıcısı Tespiti (Q2)
 - **Hipotez**: Saldırganın kullandığı IP adresi, belirli bir hosting sağlayıcısına ait olmalı
@@ -45,7 +45,7 @@ Her fazda hipotez → test → bulgu; görseller `Assets/` altında.
   - **Lokasyon**: Miami, ABD
   - **AS Number**: AS23470
 
-![Hosting Sağlayıcısı Analizi](Assets/q2.png)
+![Hosting Sağlayıcısı Analizi](assets/q2.png)
 
 ### Faz 3 — Malware Executable Hash Analizi (Q3)
 - **Hipotez**: PowerShell betiği içinde hex formatında gömülü ikincil payload bulunmalı
@@ -63,8 +63,8 @@ Her fazda hipotez → test → bulgu; görseller `Assets/` altında.
   - **Boyut**: 65.00 KB
   - **Anti-Forensics**: Dosya adı "bb" olarak gizlenmiş (PE yerine)
 
-![PE Dosyası Tespiti](Assets/q3.1-_PE-fake-for-anti-forensics.png)
-![CyberChef ile Hash Hesaplama](Assets/q3.2-after-deleting-all-content-except-from-$hexString_bbb.png)
+![PE Dosyası Tespiti](assets/q3.1-_PE-fake-for-anti-forensics.png)
+![CyberChef ile Hash Hesaplama](assets/q3.2-after-deleting-all-content-except-from-$hexString_bbb.png)
 
 ### Faz 4 — Malware Ailesi Tanımlama (Q4)
 - **Hipotez**: Obfuscate edilmiş PowerShell kodları, belirli bir malware ailesinin imzalarını taşımalı
@@ -81,8 +81,8 @@ Her fazda hipotez → test → bulgu; görseller `Assets/` altında.
   - **Tespit Oranı**: 56/70 güvenlik satıcısı
   - **Obfuscation Tekniği**: `#` karakteri ile string masking
 
-![VirusTotal Analizi](Assets/q4.png)
-![PowerShell Deobfuscation](Assets/q4.1-load.png)
+![VirusTotal Analizi](assets/q4.png)
+![PowerShell Deobfuscation](assets/q4.1-load.png)
 
 ### Faz 5 — Malware Oluşturma Zaman Damgası (Q5)
 - **Hipotez**: HTTP yanıt başlıkları, dosyanın oluşturulma zamanını içermeli
@@ -91,7 +91,7 @@ Her fazda hipotez → test → bulgu; görseller `Assets/` altında.
   - **Oluşturma Zamanı**: `2023-10-30 15:08:44 UTC` (VirusTotal'dan)
   - **İndirme Zamanı**: `Tue, 09 Jan 2024 17:27:29 GMT` (HTTP yanıtından)
 
-![Zaman Damgası Analizi](Assets/q5.png)
+![Zaman Damgası Analizi](assets/q5.png)
 
 ### Faz 6 — LOLBin Kullanımı Analizi (Q6)
 - **Hipotez**: PowerShell betiği, gizli süreç yürütme için yasal Windows araçlarını kötüye kullanmalı
@@ -109,7 +109,7 @@ Her fazda hipotez → test → bulgu; görseller `Assets/` altında.
   - **Kullanım Amacı**: .NET derlemelerini kaydetmek için kullanılan yasal araç
   - **Anti-Forensics**: Dosya yolu obfuscate edilmiş ve parçalara bölünmüş
 
-![LOLBin Deobfuscation](Assets/q6.png)
+![LOLBin Deobfuscation](assets/q6.png)
 
 ### Faz 7 — Dropped Files Analizi (Q7)
 - **Hipotez**: PowerShell betiği, kalıcılık sağlamak için birden fazla dosya oluşturmalı
@@ -125,7 +125,7 @@ Her fazda hipotez → test → bulgu; görseller `Assets/` altında.
   - **Amaç**: Kalıcılık ve zincirleme çalıştırma
   - **Anti-Forensics**: Dosya adları "Conted" olarak obfuscate edilmiş (Content yerine)
 
-![Dropped Files Analizi](Assets/q7.png)
+![Dropped Files Analizi](assets/q7.png)
 
 ---
 

@@ -22,7 +22,7 @@ Bu vaka, SOC ekibinin tespit ettiği şüpheli ağ trafiği analizini içermekte
 ---
 
 ## 2. Teknik Analiz (Hipotez Odaklı)
-Her fazda hipotez → test → bulgu; görseller `Assets/` altında.
+Her fazda hipotez → test → bulgu; görseller `assets/` altında.
 
 ### Faz 1 — Initial Access Analizi (Q1)
 - **Hipotez**: İlk erişim için IP adresini bulursak saldırganın IP adresine ulaşmış oluruz
@@ -32,7 +32,7 @@ Her fazda hipotez → test → bulgu; görseller `Assets/` altında.
   - **Saldırgan IP**: `62.173.142.148`
   - **Kurban IP**: `10.2.14.101`
 
-![DNS Sorgusu ve IP Tespiti](Assets/q1.png)
+![DNS Sorgusu ve IP Tespiti](assets/q1.png)
 
 ### Faz 2 — Kötü Amaçlı Dosya Tespiti (Q2)
 - **Hipotez**: İlk erişim sırasında kötü amaçlı dosya indirilmiş olmalı
@@ -42,7 +42,7 @@ Her fazda hipotez → test → bulgu; görseller `Assets/` altında.
   - **Content-Type**: `application/octet-stream`
   - **Content-Disposition**: `attachment;filename=allegato_708.js`
 
-![Kötü Amaçlı Dosya Tespiti](Assets/q2.png)
+![Kötü Amaçlı Dosya Tespiti](assets/q2.png)
 
 ### Faz 3 — Dosya Hash Analizi (Q3)
 - **Hipotez**: Kötü amaçlı dosyanın SHA-256 hash değeri hesaplanabilir
@@ -51,8 +51,8 @@ Her fazda hipotez → test → bulgu; görseller `Assets/` altında.
   - **SHA-256**: `847b4ad90b1daba2d9117a8e05776f3f902dda593fb1252289538acf476c4268`
   - **Dosya Boyutu**: 5558 bytes
 
-![SHA-256 Hash Hesaplama](Assets/q3.1.png)
-![Online Hash Calculator](Assets/q3.2.png)
+![SHA-256 Hash Hesaplama](assets/q3.1.png)
+![Online Hash Calculator](assets/q3.2.png)
 
 ### Faz 4 — Process Analizi (Q4)
 - **Hipotez**: JavaScript dosyası belirli bir process ile çalıştırılmış olmalı
@@ -62,7 +62,7 @@ Her fazda hipotez → test → bulgu; görseller `Assets/` altında.
   - **Sebep**: Windows'ta .js dosyaları default olarak wscript.exe ile çalıştırılır
   - **Port Analizi**: Port 49788'de sürekli veri transferi
 
-![Process Tespiti](Assets/q4.png)
+![Process Tespiti](assets/q4.png)
 
 ### Faz 5 — İkinci Kötü Amaçlı Dosya Tespiti (Q5)
 - **Hipotez**: Saldırganın ikinci kötü amaçlı dosyasını HTTP isteklerinde bulabiliriz
@@ -72,7 +72,7 @@ Her fazda hipotez → test → bulgu; görseller `Assets/` altında.
   - **Dosya Uzantısı**: `.dll`
   - **Hedef IP**: `188.114.97.3`
 
-![İkinci Kötü Amaçlı Dosya](Assets/q5.png)
+![İkinci Kötü Amaçlı Dosya](assets/q5.png)
 
 ### Faz 6 — İkinci Dosya Hash Analizi (Q6)
 - **Hipotez**: File sekmesinden Export edilen İkinci kötü amaçlı dosyanın MD5 hash değeri hesaplanabilir
@@ -82,7 +82,7 @@ Her fazda hipotez → test → bulgu; görseller `Assets/` altında.
   - **Dosya Boyutu**: 11922432 bytes
   - **Dosya Türü**: Dynamic Link Library (DLL)
 
-![MD5 Hash Hesaplama](Assets/q6.png)
+![MD5 Hash Hesaplama](assets/q6.png)
 
 ---
 
