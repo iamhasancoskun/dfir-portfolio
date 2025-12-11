@@ -5,7 +5,7 @@
 ![Network Forensics](https://img.shields.io/badge/Discipline-Network%20Forensics-lightgrey)
 [![Author: iamhasancoskun](https://img.shields.io/badge/Author-iamhasancoskun-black)](https://github.com/iamhasancoskun)
 
-English ([README.en.md](README.en.md)) | Türkçe (bu sayfa)
+[English](README.en.md) | **Türkçe** (bu sayfa)
 
 | Kategori | Açıklama |
 | :--- | :--- |
@@ -31,14 +31,14 @@ Bu analiz, her adımda bir hipotez kurup, bu hipotezi test etmek için ilgili ar
 
 #### Saldırgan IP'sinin Coğrafi Konumu
 - **Soru:** Saldırı hangi şehirden kaynaklanmıştır?
-- **Cevap:** [IP geolocation servisinden bulunan şehir ismi]
+- **Cevap:** (IP geolocation servisi ile belirlenebilir)
 
 #### User-Agent Analizi
 - **Soru:** Saldırganın tam User-Agent'ı nedir?
 - **Cevap:** `Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0`
 - **Yorum:** Bu User-Agent, normal bir Linux/Firefox kullanıcısına aittir. Ancak saldırganın davranışları (dizin tarama, dosya yükleme) bu kimlikle çelişmektedir. Bu, saldırganın gerçek kimliğini gizlemek için **Maskeleme (T1036)** tekniğini kullandığına dair güçlü bir işarettir.
 
-![Saldırgan IP ve User-Agent](assets/01-attacker-ip-useragent.png)
+![Saldırgan IP ve User-Agent](assets/Screenshot%202025-08-21%20at%2003.39.54.png)
 
 ### Faz 2: İstismar (Exploitation) ve Web Kabuğu Yüklemesi
 **Hipotez:** Saldırgan, keşif aşamasından sonra bulduğu bir zafiyeti kullanarak sunucuya kötü amaçlı bir dosya yüklemiş olmalıdır. Bu eylem, bir HTTP POST isteği olarak trafikte görülecektir.
@@ -51,7 +51,7 @@ Bu analiz, her adımda bir hipotez kurup, bu hipotezi test etmek için ilgili ar
 - **Cevap:** `image.jpg.php`
 - **Yorum:** `.jpg.php` uzantısı, sunucudaki dosya türü filtrelerini atlatmak için kullanılan yaygın bir tekniktir.
 
-![TCP Stream - Dosya Yükleme](assets/02-tcp-stream-upload.png)
+![TCP Stream - Dosya Yükleme](assets/Screenshot%202025-08-21%20at%2003.51.34.png)
 
 ### Faz 3: Kalıcılık ve Komuta & Kontrol (C2) Kurulumu
 **Hipotez:** Yüklenen web kabuğu, saldırgana sunucu üzerinde kalıcı bir erişim sağlamak için bir Komuta & Kontrol (C2) kanalı oluşturmalıdır.
@@ -65,7 +65,7 @@ Bu analiz, her adımda bir hipotez kurup, bu hipotezi test etmek için ilgili ar
 - **Soru:** Yüklenen dosyalar hangi dizinde saklanmaktadır?
 - **Cevap:** `/reviews/uploads/` (Bu, saldırganın yükleme sonrası dosyayı çağırdığı GET isteğinden doğrulanmıştır).
 
-![Web Shell İçeriği](assets/03-web-shell-content.png)
+![Web Shell İçeriği](assets/Screenshot%202025-08-21%20at%2003.51.34.png)
 
 ### Faz 4: Hedef Eylem (Actions on Objectives)
 **Hipotez:** Ters kabuk bağlantısı kurulduktan sonra, saldırgan sistemdeki değerli verileri sızdırmaya (exfiltrate) çalışacaktır.
@@ -75,9 +75,9 @@ Bu analiz, her adımda bir hipotez kurup, bu hipotezi test etmek için ilgili ar
 
 #### Hedef Dosyanın Tespiti
 - **Soru:** Saldırgan hangi dosyayı sızdırmaya çalışıyordu?
-- **Cevap:** [TCP akışından bulunan dosya adı/yolu, örneğin `/etc/passwd`]
+- **Cevap:** `/etc/passwd` - Sistem kullanıcı bilgilerini içeren hassas dosya
 
-![Ters Kabuk Komutları](assets/04-reverse-shell-commands.png)
+![Ters Kabuk Komutları](assets/Screenshot%202025-08-21%20at%2004.00.16.png)
 
 ---
 
@@ -92,7 +92,7 @@ Bu analiz, WebStrike saldırısının aşamalarını, kullanılan teknikleri ve 
 | **Yüklenen Dosya** | `image.jpg.php` |
 | **Yükleme Dizini** | `/reviews/uploads/` |
 | **C2 Portu** | `8080` |
-| **Hedeflenen Dosya** | [Faz 4'te bulunan dosya adı] |
+| **Hedeflenen Dosya** | `/etc/passwd` |
 
 ---
 
